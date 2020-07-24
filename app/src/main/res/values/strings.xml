@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">网络请求</string>
+    <string name="ok_http">OkHttp</string>
+</resources>
