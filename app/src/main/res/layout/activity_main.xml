@@ -16,4 +16,14 @@
         android:textAllCaps="false"
         android:textColor="@color/colorTextPrimary" />
 
+    <Button
+        android:id="@+id/btn_retrofit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnOkHttp"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="@string/retrofit"
+        android:textAllCaps="false"
+        android:textColor="@color/colorTextPrimary" />
+
 </RelativeLayout>

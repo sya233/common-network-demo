@@ -1,5 +1,6 @@
 package com.upai.commonnetworkdemo.okhttp
 
+import android.util.Log
 import com.google.gson.Gson
 import com.upai.commonnetworkdemo.util.History
 import okhttp3.Call
@@ -7,7 +8,7 @@ import okhttp3.Callback
 import okhttp3.Response
 import java.io.IOException
 
-class OkHttpPresenter(private val okHttpView: OkHttpView, val okHttpModel: OkHttpModel) {
+class OkHttpPresenter(private val okHttpView: OkHttpView, private val okHttpModel: OkHttpModel) {
 
     fun requestDataFromServer(month: Int, day: Int) {
         okHttpView.showProgress()
@@ -20,7 +21,7 @@ class OkHttpPresenter(private val okHttpView: OkHttpView, val okHttpModel: OkHtt
             override fun onResponse(call: Call?, response: Response?) {
                 okHttpView.hideProgress()
                 if (response != null) {
-                    val json: String = response.body().string()
+                    val json: String? = response.body()?.string()
                     val history: History =
                         Gson().fromJson(
                             json, History::class.java

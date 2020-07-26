@@ -17,7 +17,7 @@ class OkHttpModel {
                 "key", key
             ).build()
 
-        val request = Request.Builder().url(address).post(requestBody).build()
+        val request = Request.Builder().url("$address/toh").post(requestBody).build()
         client.newCall(request).enqueue(callback)
     }
 

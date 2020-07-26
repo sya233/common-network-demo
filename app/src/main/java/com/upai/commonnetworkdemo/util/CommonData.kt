@@ -12,7 +12,7 @@ const val version = "1.0"
 
 const val key = "0d696f99614d80195334a654faa9fc66"
 
-const val address = "http://api.juheapi.com/japi/toh"
+const val address = "http://api.juheapi.com/japi"
 
 // bean
 data class History(
